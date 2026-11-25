@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "OP-Lub6/1.0.0": {
+        "runtime": {
+          "OP-Lub6.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OP-Lub6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
