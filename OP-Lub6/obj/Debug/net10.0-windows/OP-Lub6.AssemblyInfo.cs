@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OP-Lub6")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce7b71f0367fce92b4ba5440a6cefa582b9290df")]
 [assembly: System.Reflection.AssemblyProductAttribute("OP-Lub6")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OP-Lub6")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

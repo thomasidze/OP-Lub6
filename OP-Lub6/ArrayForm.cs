@@ -14,8 +14,16 @@ namespace OP_Lub6
         private int ArrayLen;
         private int MaxValue;
         private int MinValue;
+        private bool shellbutton = false;
 
         private double AverageValue;
+        private int[] mass;
+        private int[] mass2;
+        private int[] mass3;
+        private long shelltimer;
+        private long inptimer;
+
+
 
         public ArrayForm()
         {
@@ -48,36 +56,42 @@ namespace OP_Lub6
             {
                 button2.Enabled = false;
                 button3.Enabled = false;
-                int[] mass = new int[ArrayLen];
+                mass = new int[ArrayLen];
                 Random rnd = new Random();
                 for (int i = 0; i < ArrayLen; i++)
                 {
                     mass[i] = rnd.Next(-100, 100);
                 }
-                int[] mass2 = ArrayWork.copyarr(mass);
-                int[] mass3 = ArrayWork.copyarr(mass);
-                Stopwatch inptimer = Stopwatch.StartNew();
+                mass2 = ArrayWork.copyarr(mass);
+                mass3 = ArrayWork.copyarr(mass);
+                Stopwatch atimer = Stopwatch.StartNew();
                 ArrayWork.inpsort(mass2);
-                inptimer.Stop();
-                Stopwatch shelltimer = Stopwatch.StartNew(); //inptimer.ElapsedMilliseconds
+                atimer.Stop();
+                inptimer = atimer.ElapsedMilliseconds;
+                Stopwatch btimer = Stopwatch.StartNew(); //inptimer.ElapsedMilliseconds
                 ArrayWork.shellsort(mass3);
-                shelltimer.Stop();
+                btimer.Stop();
+                shelltimer = btimer.ElapsedMilliseconds;
                 MaxValue = ArrayWork.maxinarr(mass);
                 MinValue = ArrayWork.mininarr(mass);
                 AverageValue = ArrayWork.avginarr(mass);
-                dataGridView1.SuspendLayout();
-                dataGridView1.Rows.Clear();
-                if (dataGridView1.Columns.Count == 0)
-                {
-                    dataGridView1.Columns.Add("ColValue", "Исходный массив");
-                }
-                foreach (int i in mass)
-                {
-                    dataGridView1.Rows.Add((object)i);
-                }
-                dataGridView1.ResumeLayout();
+                FillGrid(dataGridView1, "Исходный массив", mass);
 
             }
+        }
+        private void FillGrid(DataGridView grid, string header, int[] array)
+        {
+            grid.SuspendLayout();
+            grid.Rows.Clear();
+            if (grid.Columns.Count == 0)
+            {
+                grid.Columns.Add("ColValue", header);
+            }
+            foreach (int i in array)
+            {
+                grid.Rows.Add((object)i);
+            }
+            grid.ResumeLayout();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -88,6 +102,27 @@ namespace OP_Lub6
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (mass3 != null)
+            {
+                FillGrid(dataGridView3, "Сортировка Шелла", mass3);
+            }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (mass2 != null)
+            {
+                FillGrid(dataGridView2, "Сортировка вставками", mass2);
+            }
         }
     }
 }

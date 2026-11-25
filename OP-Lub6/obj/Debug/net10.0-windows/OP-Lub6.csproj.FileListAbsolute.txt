@@ -19,3 +19,4 @@ C:\Users\thomasiano\Desktop\OP-Lub6\OP-Lub6\obj\Debug\net10.0-windows\OP-Lub6.cs
 C:\Users\thomasiano\Desktop\OP-Lub6\OP-Lub6\obj\Debug\net10.0-windows\OP_Lub6.FuncForm.resources
 C:\Users\thomasiano\Desktop\OP-Lub6\OP-Lub6\obj\Debug\net10.0-windows\OP_Lub6.About.resources
 C:\Users\thomasiano\Desktop\OP-Lub6\OP-Lub6\obj\Debug\net10.0-windows\OP_Lub6.ArrayForm.resources
+C:\Users\thomasiano\Desktop\OP-Lub6\OP-Lub6\obj\Debug\net10.0-windows\OP-Lub6.sourcelink.json

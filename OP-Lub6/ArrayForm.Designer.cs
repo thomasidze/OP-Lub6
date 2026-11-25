@@ -37,6 +37,8 @@
             button4 = new Button();
             dataGridView2 = new DataGridView();
             dataGridView3 = new DataGridView();
+            button5 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -116,6 +118,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.Size = new Size(127, 370);
             dataGridView2.TabIndex = 7;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // dataGridView3
             // 
@@ -125,9 +128,31 @@
             dataGridView3.Size = new Size(127, 370);
             dataGridView3.TabIndex = 8;
             // 
+            // button5
+            // 
+            button5.Location = new Point(12, 328);
+            button5.Name = "button5";
+            button5.Size = new Size(92, 47);
+            button5.TabIndex = 9;
+            button5.Text = "Сортировка Шелла";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(12, 275);
+            button6.Name = "button6";
+            button6.Size = new Size(92, 47);
+            button6.TabIndex = 10;
+            button6.Text = "Сортировка вставками";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // ArrayForm
             // 
             ClientSize = new Size(701, 422);
+            Controls.Add(button6);
+            Controls.Add(button5);
             Controls.Add(dataGridView3);
             Controls.Add(dataGridView2);
             Controls.Add(button4);
@@ -159,5 +184,7 @@
         private Button button4;
         private DataGridView dataGridView2;
         private DataGridView dataGridView3;
+        private Button button5;
+        private Button button6;
     }
 }
